@@ -42,6 +42,11 @@ html, body {
     font-size: 2.3rem;
 }
 
+blockquote p {
+    background-color: light;
+    padding: 15px;
+}
+
 /* NAVBAR AND INTERNAL ITEMS START */
 /* CONTACT BUTTON START */
 #contact-button {
@@ -168,10 +173,11 @@ NAVBAR CONTINUES
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
+
     
-    animation: slideIn 5s ease;
+    animation: slideIn 3s ease;
     animation-fill-mode: forwards;
-    animation-delay: 1s;
+    animation-delay: 0.5s;
 }
 
 @keyframes slideIn {
@@ -192,9 +198,9 @@ NAVBAR CONTINUES
     background: black;
     transition: all 0.25s;
 
-    animation: fadeInDark 4s cubic-bezier(.07,.78,.17,.92);
+    animation: fadeInDark 3s cubic-bezier(.07,.78,.17,.92);
     animation-fill-mode: forwards;
-    animation-delay: 1s;
+    animation-delay: 0.5s;
 }
 
 #main-image::after {
@@ -278,6 +284,17 @@ NAVBAR CONTINUES
 #main-cta:hover {
     background-color: #565656;
     content: "\00bb";
+}
+
+.infoh3 {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.main-paragraphs {
+    padding: 0 10vw 0 10vw;
 }
 
 /* Contact Page */
