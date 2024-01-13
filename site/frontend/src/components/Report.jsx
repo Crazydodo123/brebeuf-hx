@@ -57,23 +57,23 @@ const Report = () => {
                     </li>
                     <li className='report-label'>
                         <label htmlFor="phone">Quel est le numéro de téléphone de l'établissement?</label><br />
-                        <input className='report-input' required { ...phone }></input>
+                        <input className='report-input' { ...phone }></input>
                     </li>
                     <li className='report-label'>
                         <label htmlFor="email">Quelle est l'addresse courielle de l'établissement?</label><br />
-                        <input className='report-input' required { ...email }></input>
+                        <input className='report-input' { ...email }></input>
                     </li>
                     <li className='report-label'>
                         <label htmlFor="website">Quel est le site Web de l'établissement?</label><br />
-                        <input className='report-input' required { ...website }></input>
+                        <input className='report-input' { ...website }></input>
                     </li>
                     <li className='report-label'>
                         <label htmlFor="address">Quelle est l'addresse de l'établissement?</label><br />
-                        <input className='report-input' required { ...address }></input>
+                        <input className='report-input' { ...address }></input>
                     </li>
                     <li className='report-label'>
                         <label htmlFor="description">Donnez une description de l'établissement.</label><br />
-                        <input className='report-input' required { ...description }></input>
+                        <input className='report-input' { ...description }></input>
                     </li>
                 </ol>
                 <button className='report-button'>Soumettre</button>

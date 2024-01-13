@@ -13,7 +13,7 @@ const Map = () => {
     
     let map
     const d = new Date()
-
+      
     loader
         .importLibrary('maps')
         .then(({Map}) => {
@@ -91,21 +91,17 @@ const Map = () => {
         })
     }, [])
 
-    console.log(placesData)
-
     loader
         .importLibrary('visualization')
         .then(() => {
             const heatmapData = locationData.map(location => {
                 let weight
 
-                if (d.getTime() - location.time < 7200000) {
-                    weight = 7200000 - (location.time - d.getTime())
+                if (d.getTime() - location.time < 86400000) {
+                    weight = 86400000 - (location.time - d.getTime())
                 } else {
                     weight = 0
                 }
-
-                console.log(weight)
 
                 return {
                     location: new google.maps.LatLng(location.lat, location.lon),
