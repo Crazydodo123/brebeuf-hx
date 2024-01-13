@@ -167,10 +167,25 @@ NAVBAR CONTINUES
 /* NAVBAR END */
 
 /* INFO COMPONENT START*/
+#notre-mission {
+    background-color: #f6f6f6;
+    margin-top: -30px;
+}
+#comment-aider ol{
+    margin-left: 5vw;
+    margin-right: 5vw;
+    line-height: 30px;
+    background-color: #9f6429;
+    border-radius: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #32200d;
+}
 
 #who-we-r {
     padding: 10px 0 20px 0;
     margin-top: -10px; 
+    margin-bottom: 0;
     background-color: #E6E6E6;
 }
 
