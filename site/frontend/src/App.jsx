@@ -5,6 +5,8 @@ import {
 
 import Info from './routes/Info'
 import Map from './routes/Map'
+import Donate from './routes/Donate'
+import Thanks from './routes/Thanks'
 import Contact from './routes/Contact'
 
 import messageServices from './services/messages'
@@ -30,7 +32,7 @@ const App = () => {
           <ul id="navbar-links">
             <Link className="navlink" to="/map">Areas of Interest</Link>
             <Link className="navlink" to="/socials">Social Media</Link>
-            <Link className="navlink" to="/contest">Donate</Link>
+            <Link className="navlink" to="/donate">Donate</Link>
           </ul>
           <Link to="/contact" id='nav-button'>
             <button id="contact-button">Contact Us!</button>
@@ -42,6 +44,8 @@ const App = () => {
       <Routes>
         <Route path='/map' element={<Map />} />
         <Route path='/contact' element={<Contact sendMessage={sendMessage} />} />
+        <Route path='donate' element={<Donate />} />
+        <Route path='thank-you' element={<Thanks />} />
         <Route path='/' element={<Info />} />
       </Routes>
     </Router>

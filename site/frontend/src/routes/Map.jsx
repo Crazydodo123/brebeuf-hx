@@ -17,7 +17,7 @@ const Map = () => {
         .importLibrary('maps')
         .then(({Map}) => {
             map = new Map(document.getElementById("map"), {
-                center: { lat: 45.4855, lng: -73.6278 },
+                center: { lat: 45.4955, lng: -73.6278 },
                 zoom: 14,
             })
         })
@@ -30,20 +30,19 @@ const Map = () => {
         })
     }, [])
 
-    console.log('hi')
-    console.log(locationData)
-
     loader
         .importLibrary('visualization')
         .then(() => {
             const heatmapData = locationData.map(location => {
                 let weight
 
-                if (location.time - d.getTime() < 129600) {
-                    weight = 129600 - location.time - d.getTime()
+                if (d.getTime() - location.time < 7200000) {
+                    weight = 7200000 - (location.time - d.getTime())
                 } else {
                     weight = 0
                 }
+
+                console.log(weight)
 
                 return {
                     location: new google.maps.LatLng(location.lat, location.lon),
@@ -54,7 +53,16 @@ const Map = () => {
             const heatmap = new google.maps.visualization.HeatmapLayer({
                 data: heatmapData
             })
+
             heatmap.setMap(map)
+            heatmap.set('radius', 25)
+            heatmap.set('gradient', [
+                "rgba(255, 255, 255, 0)",
+                "rgba(255, 133, 133, 1)",
+                "rgba(255, 0, 0, 1)", 
+
+
+            ])
         })
 
     const report = () => {
@@ -64,12 +72,16 @@ const Map = () => {
         } else if (document.cookie) {
             alert('Too many reports, please try again later')
         } else {
-            navigator.geolocation.getCurrentPosition(sendPosition)
+            navigator.geolocation.watchPosition(sendPosition,
+                (error) => console.log(error),
+                { enableHighAccuracy: true }
+            )
         }
-        
     }
 
     const sendPosition = (position) => {
+        console.log(position)
+
         locationServices.create({
             lat: position.coords.latitude, 
             lon: position.coords.longitude,
@@ -79,7 +91,15 @@ const Map = () => {
             const expires = (new Date(Date.now() + 5000)).toUTCString();
             document.cookie = "timeout=true; expires=" + expires + ";path=/;"
         })
-        
+    }
+
+    const manualSendPosition = (e) => {
+        e.preventDefault()
+        const latitude = e.target[0].value
+        const longitude = e.target[1].value
+        console.log(lat, lon)
+
+        sendPosition({ coords: { latitude, longitude } })
     }
 
     return (
@@ -87,6 +107,11 @@ const Map = () => {
             <h2 className="subheader">Heatmap of the Homeless</h2>
             <div id="map"></div>            
             <button id='report-button' onClick={report}>Report Homeless</button>
+            <form onSubmit={manualSendPosition}>
+                <input id='lat'></input>
+                <input id='lon'></input>
+                <button type='submit'>submit</button>
+            </form>
         </div>
 
     )
