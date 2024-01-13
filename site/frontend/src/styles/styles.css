@@ -49,6 +49,7 @@ blockquote p {
 
 /* NAVBAR AND INTERNAL ITEMS START */
 /* CONTACT BUTTON START */
+
 #contact-button {
     border-radius: 2px;
     padding: 10px;
@@ -166,10 +167,17 @@ NAVBAR CONTINUES
 /* NAVBAR END */
 
 /* INFO COMPONENT START*/
+
+#who-we-r {
+    padding: 10px 0 20px 0;
+    margin-top: -10px; 
+    background-color: #E6E6E6;
+}
+
 #title {
     color: white;
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
@@ -220,13 +228,13 @@ NAVBAR CONTINUES
     opacity: 0;
     color: white;
     position: absolute;
-    top: 80%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 5px;
-    width: 15vw;
+    width: 20vw;
     
-    background-color: #393939;
+    background-color: #9f6429;
     padding: 10px;
     border-radius: 8px;
 
@@ -237,7 +245,7 @@ NAVBAR CONTINUES
 
     animation: slideIn 4s ease;
     -webkit-animation: slideIn 4s ease;
-    animation-delay: 2s;
+    animation-delay: 1s;
     animation-fill-mode: forwards;
 
     overflow: hidden;
@@ -245,10 +253,6 @@ NAVBAR CONTINUES
     transition: all 0.25s;
     cursor: pointer;
     border: none;
-}
-
-#main-cta:hover {
-    background-color: #565656;
 }
 
 #main-cta:active {
@@ -274,7 +278,6 @@ NAVBAR CONTINUES
 
 #main-cta:hover span {
     padding-right: 20px;
-    
 }
 
 #main-cta:hover span:after {
@@ -283,7 +286,7 @@ NAVBAR CONTINUES
 }
 
 #main-cta:hover {
-    background-color: #565656;
+    background-color: #6d451c;
     content: "\00bb";
 }
 
@@ -296,6 +299,31 @@ NAVBAR CONTINUES
 
 .main-paragraphs {
     padding: 0 10vw 0 10vw;
+}
+
+blockquote p {
+    background-color: lightgrey;
+    font-style: italic;
+    border-left: 3px solid darkgrey;
+    border-top: 3px solid darkgrey;
+}
+
+blockquote span {
+    font-weight: bold;
+    font-size: smaller;
+}
+
+.mission-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+#mission-text {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    line-height: 30px;
 }
 
 /* Sign Up page */

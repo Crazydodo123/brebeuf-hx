@@ -41,7 +41,7 @@ const App = () => {
             <p className="opacity-mid">|</p>
           </ul>
           <Link to="/contact" id='nav-button'>
-            <button id="contact-button"><span>Contactez-nous</span></button>
+            <button className="navbar-text" id="contact-button"><span>Contactez-nous</span></button>
           </Link>
         </nav>
       </header>
