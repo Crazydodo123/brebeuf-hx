@@ -12,8 +12,8 @@ RUN apt install nodejs -y
 RUN mkdir -p /app
 RUN cd /app && git clone 'https://github.com/Crazydodo123/brebeuf-hx'
 WORKDIR /app/brebeuf-hx/site/backend
+COPY .env .
 RUN npm install
-#RUN npm run build
 
 ENTRYPOINT ["npm", "run", "dev"]
 
