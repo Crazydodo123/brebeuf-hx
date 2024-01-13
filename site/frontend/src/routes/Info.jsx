@@ -43,7 +43,6 @@ const Info = () => {
                     <li>Acceptant d’offrir des commandites au projet (entreprises) en envoyant un courriel à le.projet.ganymede@gmail.com ;</li>
                     <li>Signalant votre intérêt à rejoindre le projet à être de bénévole en remplissant le formulaire.</li>
                 </ol>
-                <p className = "main-paragraphs">Ici, un bouton menant au formulaire sous forme de Forms ou autre logiciel où les réponses sont accessibles au propriétaire du domaine.</p>
             </div>
             
         </div>

@@ -12,6 +12,7 @@ import Report from './components/Report'
 
 import messageServices from './services/messages'
 import userServices from './services/user'
+import PlaceServices from './services/places'
 import Socials from './routes/Socials'
 import SignUp from './routes/SignUp'
 
@@ -34,6 +35,18 @@ const App = () => {
       alert('Bienvenue à bord')
 
     } catch({ response }) {
+      console.log(response.data)
+      alert(response.data.error)
+    }
+  }
+
+  const sendPlace = async (newPlace) => {
+    try {
+      await PlaceServices.create(newPlace)
+      alert("Nouveau point d'intérêt créé")
+
+    } catch({ response }) {
+      console.log(response)
       console.log(response.data)
       alert(response.data.error)
     }
@@ -74,7 +87,7 @@ const App = () => {
           </Routes>
         </Router>
       </div>
-      <Report />
+      <Report sendPlace={sendPlace} />
     </>
     
     

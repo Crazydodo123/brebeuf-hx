@@ -1,8 +1,9 @@
 import { useField } from '../hooks/index'
 
 import Map from '../routes/Map'
+import locationServices from '../services/locations'
 
-const Report = () => {
+const Report = ({ sendPlace }) => {
     const report = () => {
         if (!navigator.geolocation) {
             alert("Geolocation is not supported by this browser.")
@@ -17,21 +18,22 @@ const Report = () => {
         }
     }
 
+    const d = new Date()
+
     const sendPosition = (position) => {
-        console.log(position)
 
         locationServices.create({
             lat: position.coords.latitude, 
             lon: position.coords.longitude,
             time: d.getTime(),
-        }).then(newLocation => {
-            setLocationData(locationData.concat(newLocation))
+        }).then(() => {
             const expires = (new Date(Date.now() + 5000)).toUTCString();
             document.cookie = "timeout=true; expires=" + expires + ";path=/;"
+
         })
     }
     
-    const nom = useField('nom')
+    const name = useField('name')
     const type = useField('type')
     const phone = useField('phone')
     const email = useField('email')
@@ -39,17 +41,61 @@ const Report = () => {
     const address = useField('address')
     const description = useField('description')
     
+    const submit = async (event) => {
+        event.preventDefault()
+
+        if (!navigator.geolocation) {
+            alert("Geolocation is not supported by this browser.")
+            
+        } else if (document.cookie) {
+            alert('Too many reports, please try again later')
+        } else {
+            navigator.geolocation.watchPosition(sendPoint,
+                (error) => console.log(error),
+                { enableHighAccuracy: true }
+            )
+        }
+    }
+
+    const sendPoint = (position) => {
+        const newPlace = {
+            'name': name.value,
+            'type': type.value,
+            'phone': phone.value,
+            'email': email.value,
+            'website': website.value,
+            'address': address.value,
+            'description': description.value,
+            'lat': position.coords.latitude, 
+            'lon': position.coords.longitude,
+            'time': d.getTime()
+        }
+
+        sendPlace(newPlace)
+
+        name.clear()
+        type.clear()
+        phone.clear()
+        email.clear()
+        website.clear()
+        address.clear()
+        description.clear()
+
+        const expires = (new Date(Date.now() + 5000)).toUTCString();
+        document.cookie = "timeout=true; expires=" + expires + ";path=/;"
+    }
+
     return (
         <div id='report-section'>
             <Map />
             <h3>Signaler un ininérant</h3>
             <button className='report-button' onClick={report}>Signaler un itinérant</button>
             <h3>Signaler un point d'intérêt</h3>
-            <form>
+            <form onSubmit={submit}>
                 <ol>
                     <li className='report-label'>
-                        <label htmlFor="nom">Quel est le nom de l'établissement?</label><br />
-                        <input className='report-input' required { ...nom }></input>
+                        <label htmlFor="name">Quel est le name de l'établissement?</label><br />
+                        <input className='report-input' required { ...name }></input>
                     </li>
                     <li className='report-label'>
                         <label htmlFor="type">Quel est le type de l'établissement?</label><br />
