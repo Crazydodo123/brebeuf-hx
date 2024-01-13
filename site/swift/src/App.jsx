@@ -17,14 +17,14 @@ const App = () => {
           </Link>
           <ul id="navbar-links">
             <p className = "opacity-mid">|</p>
-            <Link className="navbar-item navbar-item-hover navbar-text" to="/roadmap">Areas of Interest</Link>
-            <Link className="navbar-item navbar-item-hover navbar-text" to="/socials">Social Media</Link>
-            <Link className="navbar-item navbar-item-hover navbar-text" to="/contest">Donate</Link>
+            <Link className="navbar-item navbar-item-hover navbar-text" to="/roadmap">Zones d'intérêt</Link>
+            <Link className="navbar-item navbar-item-hover navbar-text" to="/socials">Média Sociaux</Link>
+            <Link className="navbar-item navbar-item-hover navbar-text" to="/contest">Dons</Link>
             <p className = "opacity-mid">|</p>
           </ul>
           
           <Link to="/contact" id='nav-button'>
-            <button className = "navbar-text" id="contact-button"><span>Contact Us</span></button>
+            <button className = "navbar-text" id="contact-button"><span>Nous contacter</span></button>
           </Link>
         </nav>
       </header>
