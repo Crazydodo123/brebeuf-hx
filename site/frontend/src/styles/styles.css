@@ -215,9 +215,10 @@ NAVBAR CONTINUES
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
-
+    
     background-color: #393939;
     padding: 10px;
+    border-radius: 8px;
 
     text-decoration: none;
     user-select: none;
@@ -245,33 +246,34 @@ NAVBAR CONTINUES
 /* Socials Page */
 
 #socials-title {
-    margin-bottom: 10vh;
-  }
+    margin: 15vh 0;
+    text-align: center;
+}
 
-  #sl {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 70%;
-    max-width: 700px;
-    margin: 0 auto;
-    flex-grow: 1;
-    gap: 40px;
-    margin-bottom: 20vh;
-  }
+#sl {
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+width: 70%;
+max-width: 700px;
+margin: 0 auto;
+flex-grow: 1;
+gap: 40px;
+margin-bottom: 20vh;
+}
 
-  #sl > a {
-    margin: 0 auto;
-  }
+#sl > a {
+margin: 0 auto;
+}
 
-  .logo {
-    width: 150px;
-  }
+.logo {
+width: 150px;
+}
 
-  #discord {
-    border-radius: 30px
-  }
+#discord {
+border-radius: 30px
+}
 
 /* Contact Page */
 
@@ -345,3 +347,38 @@ background-color: #38342c;
 cursor: pointer;
 }
 /* Contact page End */
+
+
+/* Donate */
+
+#thanks-div {
+    position: absolute;
+    height: 60%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#thanks-header {
+    font-size: 5em;
+    text-align: center;
+}
+
+#return-button {
+    color: white;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: #393939;
+    padding: 10px;
+    border-radius: 8px;
+
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    
+}

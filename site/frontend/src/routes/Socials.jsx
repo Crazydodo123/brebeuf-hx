@@ -6,20 +6,20 @@ const Socials = () => {
 
   return (
     <div id="socials">
-      <h2 className="subtitle" id="socials-title">Join us on Social Media</h2>
+      <h2 className="subheader" id="socials-title">Join us on Social Media</h2>
       <section id="sl">
       <a 
-        href="https://www.instagram.com/_mari_linguistics_/"
+        href="https://www.instagram.com/ganymedeshouse/"
         target="_blank">
         <img src={instagram} className="logo" />
       </a>
-      <a 
-        href="https://discord.gg/CdMWzmGe"
+      <a
+        href="https://discord.gg/DqACGw88md"
         target="_blank">
         <img src={discord} className="logo" id="discord" />
       </a>
       <a 
-        href="https://github.com/Crazydodo123/mari-linguistics"
+        href="https://github.com/Crazydodo123/brebeuf-hx"
         target="_blank">
         <img src={github} className="logo" />
       
