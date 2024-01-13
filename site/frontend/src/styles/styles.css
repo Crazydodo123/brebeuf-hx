@@ -281,6 +281,52 @@ NAVBAR CONTINUES
     content: "\00bb";
 }
 
+/* Sign Up page */
+
+#signup-form {
+    margin: 0 5%;
+}
+
+.signup-label {
+    font-size: 1.1em;
+}
+
+.signup-input {
+    font-family: 'Tinos', serif;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    width: 30%;
+    padding: 5px;
+}
+
+textarea.signup-input {
+    width: 40%;
+    font-size: 16px;
+}
+
+#button-signup {
+    color: white;
+    border-radius: 5px;
+    width: 15vw;
+    
+    background-color: #393939;
+    padding: 10px;
+    border-radius: 8px;
+    margin-left: 40px;
+    margin-bottom: 30vh;
+
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+
+    overflow: hidden;
+
+    cursor: pointer;
+    border: none;
+}
+
 /* Heatmap Page */
 
 #map {

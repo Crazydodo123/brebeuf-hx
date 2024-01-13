@@ -6,7 +6,7 @@ const Socials = () => {
 
   return (
     <div id="socials">
-      <h2 className="subheader" id="socials-title">Join us on Social Media</h2>
+      <h2 className="subheader" id="socials-title">Rejoignez-nous sur nos réseaux sociaux</h2>
       <section id="sl">
       <a 
         href="https://www.instagram.com/ganymedeshouse/"

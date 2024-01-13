@@ -95,7 +95,7 @@ const Map = () => {
 
     return (
         <div>
-            <h2 className="subheader">Heatmap of the Homeless</h2>
+            <h2 className="subheader">Zônes d'intérêt</h2>
             <div id="map"></div>
             <div id='report-section'>
                 <button id='report-button' onClick={report}>Report Homeless</button>
