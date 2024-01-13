@@ -11,6 +11,7 @@ import Contact from './routes/Contact'
 
 import messageServices from './services/messages'
 import Socials from './routes/Socials'
+import SignUp from './routes/SignUp'
 
 const App = () => {
 
@@ -43,6 +44,7 @@ const App = () => {
       
 
       <Routes>
+        <Route path='sign-up' element={<SignUp />} />
         <Route path='/map' element={<Map />} />
         <Route path='/contact' element={<Contact sendMessage={sendMessage} /> } />
         <Route path='socials' element={<Socials /> } />

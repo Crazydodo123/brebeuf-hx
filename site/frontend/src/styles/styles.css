@@ -238,6 +238,10 @@ NAVBAR CONTINUES
     background-color: gray;
 }
 
+#report {
+    display: none;
+}
+
 /* Socials Page */
 
 #socials-title {

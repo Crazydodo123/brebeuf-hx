@@ -93,25 +93,13 @@ const Map = () => {
         })
     }
 
-    const manualSendPosition = (e) => {
-        e.preventDefault()
-        const latitude = e.target[0].value
-        const longitude = e.target[1].value
-        console.log(lat, lon)
-
-        sendPosition({ coords: { latitude, longitude } })
-    }
-
     return (
         <div>
             <h2 className="subheader">Heatmap of the Homeless</h2>
-            <div id="map"></div>            
-            <button id='report-button' onClick={report}>Report Homeless</button>
-            <form onSubmit={manualSendPosition}>
-                <input id='lat'></input>
-                <input id='lon'></input>
-                <button type='submit'>submit</button>
-            </form>
+            <div id="map"></div>
+            <div id='report-section'>
+                <button id='report-button' onClick={report}>Report Homeless</button>
+            </div>
         </div>
 
     )
