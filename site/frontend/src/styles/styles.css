@@ -20,6 +20,14 @@ html, body {
 
 /* TEXT MODIFICATIONS and REUSABLE CLASSES*/
 
+.font-correction {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.spacing {
+    padding: 20px 0 20px 0;
+}
+
 .bold {
     font-weight: bold;
 }
@@ -509,6 +517,17 @@ cursor: pointer;
 
 
 /* Donate */
+
+#soutenir-gany p{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.container-donation {
+    display: flex;
+    justify-content: center;
+}
+
 #donate-button {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: #FFA445;
@@ -534,6 +553,7 @@ cursor: pointer;
 #donate-button:active {
     background-color:#585858;
     color: #fcb263;
+    font-size:25px;
     box-shadow: 0 0 100px #FFA445;
 }
 
@@ -569,37 +589,7 @@ cursor: pointer;
     
 }
 
-
-/* Donate */
-
-#thanks-div {
-    position: absolute;
-    height: 60%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
-
-#thanks-header {
-    font-size: 5em;
-    text-align: center;
-}
-
-#return-button {
-    color: white;
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    background-color: #393939;
+#faites-un-don {
     padding: 10px;
-    border-radius: 8px;
-
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-drag: none;
-    
+    background-color: #E6E6E6;
 }
