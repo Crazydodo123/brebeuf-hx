@@ -32,7 +32,7 @@ const Contact = ({ sendMessage }) => {
 
     return (
         <>
-            <h2 id="contact-header">Contact Us!</h2>
+            <h2 className="subheader">Contact Us!</h2>
             <form id="contact-form" onSubmit={submit}>
                 <div className="input-section">
                     <p className="subsection-header">Name *</p>

@@ -3,6 +3,10 @@ body {
     padding: 0;
 }
 
+.subheader {
+    text-align: center;
+    font-size: 2.3rem;
+}
 
 /* Navbar */
 
@@ -51,10 +55,7 @@ body {
 
 /* Contact Page */
   
-#contact-header {
-    text-align: center;
-    font-size: 2.3rem;
-}
+
 
 #contact-form {
     width: 60%;

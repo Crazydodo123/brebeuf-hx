@@ -12,7 +12,7 @@ messagesRouter.post('/', async (request, response) => {
   const content = request.body
   
   if (!content) response.status(401)
-    .json({ error: 'no token was provided' })
+    .json({ error: 'no content was provided' })
 
   const message = new Message({
     ...content

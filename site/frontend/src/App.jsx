@@ -4,16 +4,16 @@ import {
 } from 'react-router-dom'
 
 import Info from './routes/Info'
+import Map from './routes/Map'
 import Contact from './routes/Contact'
 
-
-import messageService from './services/messages'
+import messageServices from './services/messages'
 
 const App = () => {
 
   const sendMessage = async (newMessage) => {
     try {
-      await messageService.create(newMessage)
+      await messageServices.create(newMessage)
       alert('A message has been sent')
 
     } catch({ response }) {
@@ -26,7 +26,7 @@ const App = () => {
     <Router>
       <header>
         <nav id="navbar">
-          <p></p>
+          <Link className='navlink' to='/'>Ganymède</Link>
           <ul id="navbar-links">
             <Link className="navlink" to="/map">Areas of Interest</Link>
             <Link className="navlink" to="/socials">Social Media</Link>
@@ -40,6 +40,7 @@ const App = () => {
       
 
       <Routes>
+        <Route path='/map' element={<Map />} />
         <Route path='/contact' element={<Contact sendMessage={sendMessage} />} />
         <Route path='/' element={<Info />} />
       </Routes>

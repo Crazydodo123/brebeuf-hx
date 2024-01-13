@@ -6,6 +6,7 @@ const cors = require('cors')
 const mongoose = require('mongoose')
 
 const messagesRouter = require('./controllers/messages')
+const locationsRouter = require('./controllers/locations')
 const usersRouter = require('./controllers/users')
 const loginRouter = require('./controllers/login')
 
@@ -29,6 +30,7 @@ app.use(express.static('build'))
 app.use(express.json())
 
 app.use('/api/messages', messagesRouter)
+app.use('/api/locations', locationsRouter)
 app.use('/api/users', usersRouter)
 app.use('/api/login', loginRouter)
 
