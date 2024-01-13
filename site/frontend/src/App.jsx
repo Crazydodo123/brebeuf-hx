@@ -4,35 +4,51 @@ import {
 } from 'react-router-dom'
 
 import Info from './routes/Info'
+import Map from './routes/Map'
+import Donate from './routes/Donate'
+import Thanks from './routes/Thanks'
 import Contact from './routes/Contact'
 
+import messageServices from './services/messages'
+import Socials from './routes/Socials'
+
 const App = () => {
+
+  const sendMessage = async (newMessage) => {
+    try {
+      await messageServices.create(newMessage)
+      alert('A message has been sent')
+
+    } catch({ response }) {
+      console.log(response.data)
+      alert(response.data.error)
+    }
+  }
 
   return (
     <Router>
       <header>
         <nav id="navbar">
-          <Link to="/">
-            <img id="logo-image" src="src\assets\whitelogo.png" alt="logo" height="30"/>
-          </Link>
+          <Link className='navlink' to='/'>Ganymède</Link>
           <ul id="navbar-links">
-            <p className = "opacity-mid">|</p>
-            <Link className="navbar-item navbar-item-hover navbar-text" to="/roadmap">Zones d'intérêt</Link>
-            <Link className="navbar-item navbar-item-hover navbar-text" to="/socials">Média Sociaux</Link>
-            <Link className="navbar-item navbar-item-hover navbar-text" to="/contest">Dons</Link>
-            <p className = "opacity-mid">|</p>
+            <Link className="navlink" to="/map">Areas of Interest</Link>
+            <Link className="navlink" to="/socials">Social Media</Link>
+            <Link className="navlink" to="/donate">Donate</Link>
           </ul>
-          
           <Link to="/contact" id='nav-button'>
-            <button className = "navbar-text" id="contact-button"><span>Nous contacter</span></button>
+            <button id="contact-button">Contact Us!</button>
           </Link>
         </nav>
       </header>
       
 
       <Routes>
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/" element={<Info />} />
+        <Route path='/map' element={<Map />} />
+        <Route path='/contact' element={<Contact sendMessage={sendMessage} /> } />
+        <Route path='socials' element={<Socials /> } />
+        <Route path='donate' element={<Donate />} />
+        <Route path='thank-you' element={<Thanks /> } />
+        <Route path='/' element={<Info />} />
       </Routes>
     </Router>
     
