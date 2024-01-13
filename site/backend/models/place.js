@@ -2,27 +2,18 @@ const mongoose = require('mongoose')
 
 const placeSchema = new mongoose.Schema({
   name: {
-    type: String
+    type: String,
+    required: true
   },
   type: {
     type: String,
     required: true,
   },
-  phoneNumber: {
-    type: String
-  },
-  email: {
-    type: String
-  },
-  website: {
-    type: String
-  },
-  address: {
-    type: String
-  },
-  description: {
-    type: String
-  },
+  phoneNumber: String,
+  email: String,
+  website: String,
+  address: String,
+  description: String,
   lat: {
     type: Number,
     required: true,

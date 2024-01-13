@@ -7,7 +7,7 @@ placesRouter.get('/', async (request, response) => {
 })
 
 placesRouter.post('/', async (request, response) => {
-  console.log(request.body)
+  console.log(request.body, 333)
   const content = request.body
   
   if (!content) response.status(401)

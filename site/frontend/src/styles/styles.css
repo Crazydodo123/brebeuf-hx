@@ -18,6 +18,19 @@ html, body {
     background-color: #FBFBFB;
 }
 
+@media (max-width: 660px) {
+    #pc-part {
+        display: none;
+    }
+}
+
+@media (min-width: 661px) {
+    #report-section {
+        display: none;
+    }
+    
+}
+
 /* TEXT MODIFICATIONS and REUSABLE CLASSES*/
 
 .bold {
@@ -283,6 +296,10 @@ NAVBAR CONTINUES
 
 /* Sign Up page */
 
+#signup-header {
+    margin: 80px 0;
+}
+
 #signup-form {
     margin: 0 5%;
 }
@@ -479,3 +496,52 @@ cursor: pointer;
     -webkit-user-drag: none;
     
 }
+
+/* Report Page */
+
+@media (max-width: 660px) {
+    #map {
+        width: 100%;
+    }
+}
+
+#report-section {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.report-button {
+    color: white;
+    border-radius: 5px;
+    width: 200px;
+    
+    background-color: #393939;
+    padding: 10px;
+    border-radius: 8px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+
+    overflow: hidden;
+
+    cursor: pointer;
+    border: none;
+}
+
+.report-label {
+    font-size: 1em;
+}
+
+.report-input {
+    font-family: 'Tinos', serif;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    width: 50%;
+    padding: 4px;
+}
+

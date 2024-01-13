@@ -32,18 +32,18 @@ const Contact = ({ sendMessage }) => {
 
     return (
         <>
-            <h2 className="subheader">Contact Us!</h2>
+            <h2 className="subheader">Contactez Nous</h2>
             <form id="contact-form" onSubmit={submit}>
                 <div className="input-section">
-                    <p className="subsection-header">Name *</p>
+                    <p className="subsection-header">Nom *</p>
                     <div className="input-subsection">
                         <div className="input-field">
                             <input className="text-input" required { ...firstName } ></input>
-                            <label htmlFor="first-name" className="input-label">First Name</label>
+                            <label htmlFor="first-name" className="input-label">Prénom</label>
                         </div>
                             <div className="input-field">
                             <input className="text-input" required { ...lastName } ></input>
-                            <label htmlFor="last-name" className="input-label">Last Name</label>
+                            <label htmlFor="last-name" className="input-label">Nom de famille</label>
                         </div>
                 </div>
                 </div>
@@ -54,7 +54,7 @@ const Contact = ({ sendMessage }) => {
                             <input className="text-input" required { ...email }></input>
                         </div>
                         <div className="input-field">
-                            <p className="subsection-header">Phone Number</p>
+                            <p className="subsection-header">Numéro de téléphone</p>
                             <input className="text-input" { ...phoneNumber } ></input>
                         </div>
                     </div>
@@ -64,7 +64,7 @@ const Contact = ({ sendMessage }) => {
                     <textarea { ...message } required ></textarea>
                     <br />
                     <br />
-                    <button type="submit" id="submit-button">Submit</button>
+                    <button type="submit" id="submit-button">Soumettre</button>
                 </div>
             </form>
         </>

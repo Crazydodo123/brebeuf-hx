@@ -1,34 +1,24 @@
-const bcrypt = require('bcrypt')
 const usersRouter = require('express').Router()
 const User = require('../models/user')
 
 usersRouter.get('/', async (request, response) => {
-  const users = await User
-    .find({}).populate('blogs', {url: 1, title: 1, author: 1})
+  const users = await User.find({})
   response.json(users)
 })
 
-
 usersRouter.post('/', async (request, response) => {
-  const { username, name, password } = request.body
-
-  if (password.length < 3) {
-    response.status(400)
-      .json( {error: 'password must be longer than 2 characters' })
-  }
-
-  const saltRounds = 10
-  const passwordHash = await bcrypt.hash(password, saltRounds)
+  console.log(request.body)
+  const content = request.body
   
+  if (!content) response.status(401)
+    .json({ error: 'no content was provided' })
+
   const user = new User({
-    username,
-    name,
-    passwordHash
+    ...content
   })
-
-  const savedUser = await user.save()
-
-  response.status(201).json(savedUser)
+  
+  const result = await user.save()
+  response.status(201).json(result)
 })
 
 module.exports = usersRouter

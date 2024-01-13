@@ -1,6 +1,6 @@
-import { useField }from '../hooks/index.js'
+import { useField } from '../hooks/index.js'
 
-const SignUp = () => {
+const SignUp = ({ sendUser }) => {
     const nom = useField('nom')
     const age = useField('age', 'number')
     const education = useField('education')
@@ -11,7 +11,7 @@ const SignUp = () => {
     const experience = useField('experience')
     const formation = useField('formation')
     const misc = useField('misc')
-    const casier = useField('casier')
+    const casier = useField('casier')   
 
     const submit = async (event) => {
         event.preventDefault()
@@ -27,10 +27,10 @@ const SignUp = () => {
             'experience': experience.value,
             'formation': formation.value,
             'misc': misc.value,
-            'casier': casier.value,
+            'casier': casier.value
         }
 
-        console.log(newUser)
+        sendUser(newUser)
 
         nom.clear()
         age.clear()
@@ -47,8 +47,8 @@ const SignUp = () => {
 
     return (
         <div>
-            <h2 className='subheader'>Inscrivez-vous pour devenir bénévole dès aujourd'hui!</h2>
-            <form id='signup-form'>
+            <h2 className='subheader' id='signup-header'>Inscrivez-vous pour devenir bénévole dès aujourd'hui!</h2>
+            <form id='signup-form' onSubmit={submit}>
                 <ol>
                     <li className='signup-label'>
                         <label htmlFor="nom">Quel est votre nom?</label><br />
@@ -91,11 +91,11 @@ const SignUp = () => {
                         <textarea className='signup-input' required { ...misc }></textarea>
                     </li>
                     <li className='signup-label'>
-                        <label htmlFor="casier">Acceptez-vous que Ganymède demande à consulter votre casier judiciaire? Cette procédure est nécessaire pour que vous puissiez participer aux activités de Ganymède. Si vous n’avez pas de casier judiciaire, elle ne donnera à Ganymède aucune informaGon sur vous. Si vous avez un casier judiciaire, vous pourrez quand même probablement participer aux activités de Ganymède.</label><br />
+                        <label htmlFor="casier">Acceptez-vous que Ganymède demande à consulter votre casier judiciaire? Cette procédure est nécessaire pour que vous puissiez participer aux activités de Ganymède. Si vous n’avez pas de casier judiciaire, elle ne donnera à Ganymède aucune information sur vous. Si vous avez un casier judiciaire, vous pourrez quand même probablement participer aux activités de Ganymède.</label><br />
                         <textarea className='signup-input' required { ...casier }></textarea>
                     </li>
                 </ol>
-                <button id="button-signup" type='submit' onSubmit={submit}>Soumettre votre candidature</button>
+                <button id="button-signup" type='submit'>Soumettre votre candidature</button>
             </form>
         </div>
     )
