@@ -55,10 +55,16 @@ html, body {
     font-size: 2.3rem;
 }
 
+blockquote p {
+    background-color: light;
+    padding: 15px;
+}
+
 /* NAVBAR AND INTERNAL ITEMS START */
 /* CONTACT BUTTON START */
+
 #contact-button {
-    border-radius: 2px;
+    border-radius: 5px;
     padding: 10px;
     color: white;
     background-color: #393939;
@@ -174,17 +180,42 @@ NAVBAR CONTINUES
 /* NAVBAR END */
 
 /* INFO COMPONENT START*/
+
+#img-ppl {
+    border-radius: 5px;
+    border: 5px solid gray;
+}
+
+#comment-aider ol{
+    margin-left: 5vw;
+    margin-right: 5vw;
+    line-height: 30px;
+    background-color: #6e451c;
+    border-radius: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #F0F0F0;
+}
+
+#who-we-r {
+    padding: 10px 0 20px 0;
+    margin-top: -10px; 
+    margin-bottom: 0;
+    background-color: #E6E6E6;
+}
+
 #title {
     color: white;
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
+
     
-    animation: slideIn 5s ease;
+    animation: slideIn 3s ease;
     animation-fill-mode: forwards;
-    animation-delay: 1s;
+    animation-delay: 0.5s;
 }
 
 @keyframes slideIn {
@@ -205,9 +236,9 @@ NAVBAR CONTINUES
     background: black;
     transition: all 0.25s;
 
-    animation: fadeInDark 4s cubic-bezier(.07,.78,.17,.92);
+    animation: fadeInDark 3s cubic-bezier(.07,.78,.17,.92);
     animation-fill-mode: forwards;
-    animation-delay: 1s;
+    animation-delay: 0.5s;
 }
 
 #main-image::after {
@@ -227,13 +258,13 @@ NAVBAR CONTINUES
     opacity: 0;
     color: white;
     position: absolute;
-    top: 80%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 5px;
-    width: 15vw;
+    width: 20vw;
     
-    background-color: #393939;
+    background-color: #9f6429;
     padding: 10px;
     border-radius: 8px;
 
@@ -244,7 +275,7 @@ NAVBAR CONTINUES
 
     animation: slideIn 4s ease;
     -webkit-animation: slideIn 4s ease;
-    animation-delay: 2s;
+    animation-delay: 1s;
     animation-fill-mode: forwards;
 
     overflow: hidden;
@@ -252,10 +283,6 @@ NAVBAR CONTINUES
     transition: all 0.25s;
     cursor: pointer;
     border: none;
-}
-
-#main-cta:hover {
-    background-color: #565656;
 }
 
 #main-cta:active {
@@ -281,7 +308,6 @@ NAVBAR CONTINUES
 
 #main-cta:hover span {
     padding-right: 20px;
-    
 }
 
 #main-cta:hover span:after {
@@ -290,8 +316,44 @@ NAVBAR CONTINUES
 }
 
 #main-cta:hover {
-    background-color: #565656;
+    background-color: #6d451c;
     content: "\00bb";
+}
+
+.infoh3 {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.main-paragraphs {
+    padding: 0 10vw 0 10vw;
+}
+
+blockquote p {
+    background-color: lightgrey;
+    font-style: italic;
+    border-left: 3px solid darkgrey;
+    border-top: 3px solid darkgrey;
+}
+
+blockquote span {
+    font-weight: bold;
+    font-size: smaller;
+}
+
+.mission-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+#mission-text {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    line-height: 30px;
 }
 
 /* Sign Up page */
@@ -464,6 +526,9 @@ cursor: pointer;
 
 
 /* Donate */
+#donate-button {
+    border: none;
+}
 
 #thanks-div {
     position: absolute;
@@ -496,6 +561,42 @@ cursor: pointer;
     -webkit-user-drag: none;
     
 }
+
+
+/* Donate */
+
+#thanks-div {
+    position: absolute;
+    height: 60%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#thanks-header {
+    font-size: 5em;
+    text-align: center;
+}
+
+#return-button {
+    color: white;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: #393939;
+    padding: 10px;
+    border-radius: 8px;
+
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    
+}
+
 
 /* Report Page */
 
