@@ -12,14 +12,19 @@ const App = () => {
     <Router>
       <header>
         <nav id="navbar">
-          <p></p>
+          <Link to="/">
+            <img id="logo-image" src="src\assets\whitelogo.png" alt="logo" height="30"/>
+          </Link>
           <ul id="navbar-links">
-            <Link className="navlink" to="/roadmap">Areas of Interest</Link>
-            <Link className="navlink" to="/socials">Social Media</Link>
-            <Link className="navlink" to="/contest">Donate</Link>
+            <p className = "opacity-mid">|</p>
+            <Link className="navbar-item navbar-item-hover navbar-text" to="/roadmap">Areas of Interest</Link>
+            <Link className="navbar-item navbar-item-hover navbar-text" to="/socials">Social Media</Link>
+            <Link className="navbar-item navbar-item-hover navbar-text" to="/contest">Donate</Link>
+            <p className = "opacity-mid">|</p>
           </ul>
+          
           <Link to="/contact" id='nav-button'>
-            <button id="contact-button">Contact Us!</button>
+            <button className = "navbar-text" id="contact-button"><span>Contact Us</span></button>
           </Link>
         </nav>
       </header>
