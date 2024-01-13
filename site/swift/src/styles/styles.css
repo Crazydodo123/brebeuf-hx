@@ -4,7 +4,7 @@ main 2: #9B4F01
 sub: #949494
 bg 1 (light): #E6E6E6
 bg 2 (dark): #393939
-bg 3 (lighter gray): #565656
+bg 3 (lighter gray): #565656 VERY GOOD
 bg 4: offwhite #FBFBFB
 
 border: 5px solid red;
@@ -25,7 +25,7 @@ html, body {
 }
 
 .font-size-big {
-    font-size: 30px;
+    font-size: 100px;
 }
 
 .opacity-mid {
@@ -110,6 +110,7 @@ NAVBAR CONTINUES
     align-items: center;
     background-color: #393939;
     justify-content: space-between;
+    border-bottom: 2px #565656 solid;
 }
 
 #navbar-links {
@@ -138,9 +139,8 @@ NAVBAR CONTINUES
 }
 
 .navbar-item:hover {
-    color: black;
     border: none;
-    background-color: #FBFBFB;
+    background-color: #565656;
 }
 
 .navbar-item:active {
@@ -156,10 +156,52 @@ NAVBAR CONTINUES
 
 /* INFO COMPONENT START*/
 #title {
-    padding: 30px 0 30px 0;
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    
+    animation: slideIn 3s ease;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 #main-image {
-    opacity: 0.5;
     width: 100%;
+    height: 450px;
+    object-fit: cover;
+    object-position:0 0;
+    opacity: 1;
+    background: black;
+    transition: all 0.25s;
+
+    animation: fadeInDark 3s cubic-bezier(.07,.78,.17,.92);
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+#main-image::after {
+    filter: brightness(30%);
+}
+
+
+
+@keyframes fadeInDark {
+    from {
+        filter: brightness(100%)
+    }
+    to {
+        filter: brightness(30%)
+    }
 }
