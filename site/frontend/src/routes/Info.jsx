@@ -1,14 +1,9 @@
-import { Link } from 'react-router-dom'
-
 const Info = () => {
     return (
         <div>
-            <div className = "container">
-                <img id="main-image" src="src/assets/itinerance.png" alt="Itinerant"/>
-                <h1 className = "font-size-big" id="title">Projet Ganymède</h1>
-                <Link to="/help">Zones d'intérêt</Link>
-            </div>
-            
+            <img src="./src/assets/cdn.jpg" alt='homeless person getting help' id='cdn-img'/>
+            <h1>Project Ganymède</h1>
+            <p>Learn how you can help</p>
             <h3>Qui sommes-nous?</h3>
             <p>Fondé en 2023, Ganymède est une initiative de onze étudiants du collégial. Constatant la réalité et les dangers de l’itinérance dans le quartier Côte-des-Neiges, les membres fondateurs décident d’organiser un groupe qui distribuera, quotidiennement, de l’eau, du café ou du bouillon aux personnes itinérantes du quartier et engagera la discussion avec eux. De cette façon, Ganymède cherche à atténuer la pression de deux dangers importants pour les personnes itinérantes : les risques liés à la température et l’exclusion sociale. En donnant de l’eau fraîche en été et des boissons chaudes en hiver, le groupe espère réduire les risques d’insolation et d’hypothermie guettant les personnes itinérantes ; en discutant avec elles, ils souhaitent leur fournir un besoin de première nécessité fréquemment oublié : les interactions humaines.</p>
             <p>Actuellement, Ganymède est à la recherche d’un organisme à but non-lucratif (OBNL) prêt à gérer ses fonds. Nous espérons pouvoir commencer nos activités de distribution à l’été 2024.</p>
