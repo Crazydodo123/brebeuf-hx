@@ -51,7 +51,7 @@ blockquote p {
 /* CONTACT BUTTON START */
 
 #contact-button {
-    border-radius: 2px;
+    border-radius: 5px;
     padding: 10px;
     color: white;
     background-color: #393939;
@@ -167,19 +167,21 @@ NAVBAR CONTINUES
 /* NAVBAR END */
 
 /* INFO COMPONENT START*/
-#notre-mission {
-    background-color: #f6f6f6;
-    margin-top: -30px;
+
+#img-ppl {
+    border-radius: 5px;
+    border: 5px solid gray;
 }
+
 #comment-aider ol{
     margin-left: 5vw;
     margin-right: 5vw;
     line-height: 30px;
-    background-color: #9f6429;
+    background-color: #6e451c;
     border-radius: 5px;
     padding-top: 20px;
     padding-bottom: 20px;
-    color: #32200d;
+    color: #F0F0F0;
 }
 
 #who-we-r {
@@ -507,6 +509,9 @@ cursor: pointer;
 
 
 /* Donate */
+#donate-button {
+    border: none;
+}
 
 #thanks-div {
     position: absolute;

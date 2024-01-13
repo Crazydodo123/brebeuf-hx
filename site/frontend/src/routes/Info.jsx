@@ -21,14 +21,14 @@ const Info = () => {
                             <li>
                                 Lutter contre les dangers liés à la température et à l’exclusion sociale qui visent les personnes en situation d’itinérance, en :
                                 <ul>
-                                    <li>Distribuant quotidiennement de l’eau, du café ou du bouillon;</li>
-                                    <li>Engageant la conversation avec les personnes servies.</li>
+                                    <li><span className="bold">Distribuant quotidiennement</span> de l’eau, du café ou du bouillon;</li>
+                                    <li><span className="bold">Engageant la conversation</span> avec les personnes servies.</li>
                                 </ul>
                             </li>
-                            <li>Offrir aux étudiants post-secondaires une opportunité de s’impliquer positivement dans leur communauté d’étude.</li>
+                            <li>Offrir aux étudiants post-secondaires <span className="bold">une opportunité de s’impliquer positivement</span> dans leur communauté d’étude.</li>
                         </ul>
                     </div>
-                    <img src="src/assets/insideroom.png" alt="peopleinaroom" height="300px"/>
+                    <img id="img-ppl" src="src/assets/insideroom.png" alt="peopleinaroom" height="300px"/>
                 </div>
             </div>
             
@@ -37,7 +37,7 @@ const Info = () => {
             
             <div id="comment-aider">
                 <h3 className="infoh3">Comment puis-je aider ?</h3>
-                <p className = "main-paragraphs">Ganymède n’accepte pas de dons en argent pour le moment. Nous voulons en effet être sûr de gérer les dons de façon parfaitement appropriée, ce qui n’est pas possible tant que nous ne sommes pas intégrés à un OBNL. Toutefois, les individus et les entreprises peuvent aider Ganymède à atteindre ce premier objectif de plusieurs façons, par exemple en :</p>
+                <p className = "main-paragraphs"><span className="bold">Ganymède n’accepte pas de dons en argent pour le moment.</span> Nous voulons en effet être sûr de gérer les dons de façon parfaitement appropriée, ce qui n’est pas possible tant que nous ne sommes pas intégrés à un OBNL. Toutefois, les individus et les entreprises peuvent aider Ganymède à atteindre ce premier objectif de plusieurs façons, par exemple en :</p>
                 <ol className = "main-paragraphs">
                     <li>Acceptant de faire de Ganymède un projet de votre OBNL;</li>
                     <li>Acceptant d’offrir des commandites au projet (entreprises) en envoyant un courriel à le.projet.ganymede@gmail.com ;</li>

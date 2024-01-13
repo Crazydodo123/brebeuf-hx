@@ -3,7 +3,12 @@ const Donate = () => {
         <div>
             <h2 className="subheader">Faites un don</h2>
             <p>Le Projet Ganymède est un organisme à but non lucratif, donc tous dons seront dirigés vers la distribution de biens aux itinérants dans le quartier Côte-des-Neiges.</p>
-            <a href='https://donate.stripe.com/test_cN2aHv5sM34I8xi5kk'><button>Donate</button></a>
+            <div className = "container">
+                <a href='https://donate.stripe.com/test_cN2aHv5sM34I8xi5kk'>
+                    <button id="donate-button">Donate</button>
+                </a>
+            </div>
+
             <div>
                 <h3 className = "infoh3">Pourquoi soutenir Ganymède ? Pourquoi participer ?</h3>
                 <p className = "main-paragraphs">En soutenant Ganymède, vous ou votre entreprise/organisme participez à la lutte contre l’exclusion sociale des personnes itinérantes. L’itinérance est une situation de stress constant qui affecte négativement la santé mentale globale des personnes qui en souffrent, notamment en raison du phénomène de désaffiliation sociale qui en résulte :</p>
