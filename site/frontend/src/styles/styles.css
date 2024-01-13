@@ -225,9 +225,10 @@ NAVBAR CONTINUES
     transform: translate(-50%, -50%);
     border-radius: 5px;
     width: 15vw;
-
+    
     background-color: #393939;
     padding: 10px;
+    border-radius: 8px;
 
     text-decoration: none;
     user-select: none;
@@ -295,6 +296,97 @@ NAVBAR CONTINUES
 
 .main-paragraphs {
     padding: 0 10vw 0 10vw;
+}
+
+/* Sign Up page */
+
+#signup-form {
+    margin: 0 5%;
+}
+
+.signup-label {
+    font-size: 1.1em;
+}
+
+.signup-input {
+    font-family: 'Tinos', serif;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    width: 30%;
+    padding: 5px;
+}
+
+textarea.signup-input {
+    width: 40%;
+    font-size: 16px;
+}
+
+#button-signup {
+    color: white;
+    border-radius: 5px;
+    width: 15vw;
+    
+    background-color: #393939;
+    padding: 10px;
+    border-radius: 8px;
+    margin-left: 40px;
+    margin-bottom: 30vh;
+
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+
+    overflow: hidden;
+
+    cursor: pointer;
+    border: none;
+}
+
+/* Heatmap Page */
+
+#map {
+    height: 450px;
+    width: 80%;
+    margin: 0 auto;
+    background-color: gray;
+}
+
+#report {
+    display: none;
+}
+
+/* Socials Page */
+
+#socials-title {
+    margin: 15vh 0;
+    text-align: center;
+}
+
+#sl {
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+width: 70%;
+max-width: 700px;
+margin: 0 auto;
+flex-grow: 1;
+gap: 40px;
+margin-bottom: 20vh;
+}
+
+#sl > a {
+margin: 0 auto;
+}
+
+.logo {
+width: 150px;
+}
+
+#discord {
+border-radius: 30px
 }
 
 /* Contact Page */
@@ -369,3 +461,73 @@ background-color: #38342c;
 cursor: pointer;
 }
 /* Contact page End */
+
+
+/* Donate */
+
+#thanks-div {
+    position: absolute;
+    height: 60%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#thanks-header {
+    font-size: 5em;
+    text-align: center;
+}
+
+#return-button {
+    color: white;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: #393939;
+    padding: 10px;
+    border-radius: 8px;
+
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    
+}
+
+
+/* Donate */
+
+#thanks-div {
+    position: absolute;
+    height: 60%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#thanks-header {
+    font-size: 5em;
+    text-align: center;
+}
+
+#return-button {
+    color: white;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: #393939;
+    padding: 10px;
+    border-radius: 8px;
+
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    
+}

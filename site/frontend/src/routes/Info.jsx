@@ -6,7 +6,7 @@ const Info = () => {
             <div className = "container">
                 <img id="main-image" src="src/assets/itinerance.png" alt="Itinerant"/>
                 <h1 className = "font-size-big" id="title">Projet Ganymède</h1>
-                <Link id="main-cta" to="/heatmap"><span>Comment aider</span></Link>
+                <Link id="main-cta" to="/sign-up">Voir comment vous pouvez aider</Link>
             </div>
             <h3 className = "infoh3">Qui sommes-nous?</h3>
             
