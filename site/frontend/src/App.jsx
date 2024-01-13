@@ -29,14 +29,18 @@ const App = () => {
     <Router>
       <header>
         <nav id="navbar">
-          <Link className='navlink' to='/'>Ganymède</Link>
+          <Link className='navlink' to='/'>
+            <img id="logo-image" src="src/assets/whitelogo.png" height="30" alt="logo"/>
+          </Link>  
           <ul id="navbar-links">
-            <Link className="navlink" to="/map">Areas of Interest</Link>
-            <Link className="navlink" to="/socials">Social Media</Link>
-            <Link className="navlink" to="/donate">Donate</Link>
+            <p className="opacity-mid">|</p>
+            <Link className="navbar-item navbar-text" to="/map">Zones d'intérêt</Link>
+            <Link className="navbar-item navbar-text" to="/socials">Médias Sociaux</Link>
+            <Link className="navbar-item navbar-text" to="/donate">Dons</Link>
+            <p className="opacity-mid">|</p>
           </ul>
           <Link to="/contact" id='nav-button'>
-            <button id="contact-button">Contact Us!</button>
+            <button id="contact-button"><span>Contactez-nous</span></button>
           </Link>
         </nav>
       </header>

@@ -220,7 +220,7 @@ NAVBAR CONTINUES
     padding: 10px;
 
     text-decoration: none;
-    
+    user-select: none;
     -webkit-user-drag: none;
     -webkit-user-select: none;
     
@@ -301,3 +301,4 @@ border: none;
 background-color: #38342c;
 cursor: pointer;
 }
+/* Contact page End */
