@@ -10,6 +10,7 @@ import Thanks from './routes/Thanks'
 import Contact from './routes/Contact'
 
 import messageServices from './services/messages'
+import Socials from './routes/Socials'
 
 const App = () => {
 
@@ -43,9 +44,10 @@ const App = () => {
 
       <Routes>
         <Route path='/map' element={<Map />} />
-        <Route path='/contact' element={<Contact sendMessage={sendMessage} />} />
+        <Route path='/contact' element={<Contact sendMessage={sendMessage} /> } />
+        <Route path='socials' element={<Socials /> } />
         <Route path='donate' element={<Donate />} />
-        <Route path='thank-you' element={<Thanks />} />
+        <Route path='thank-you' element={<Thanks /> } />
         <Route path='/' element={<Info />} />
       </Routes>
     </Router>
