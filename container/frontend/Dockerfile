@@ -15,7 +15,7 @@ WORKDIR /app/brebeuf-hx/site/frontend
 RUN npm install
 RUN npm run build
 
-ENTRYPOINT ["npm", "run", "preview"]
+ENTRYPOINT ["npm", "run", "dev"]
 
 
 
