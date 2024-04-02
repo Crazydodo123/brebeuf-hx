@@ -49,12 +49,12 @@ const SignUp = ({ sendUser }) => {
         <div>
             <h2 className='subheader' id='signup-header'>Inscrivez-vous pour devenir bénévole dès aujourd'hui!</h2>
             <form id='signup-form' onSubmit={submit}>
-                <ol>
-                    <li className='signup-label'>
+                <ol id='signup-questions'>
+                    <li className='signup-label small'>
                         <label htmlFor="nom">Quel est votre nom?</label><br />
                         <input className='signup-input' required { ...nom }></input>
                     </li>
-                    <li className='signup-label'>
+                    <li className='signup-label small'>
                         <label htmlFor ='age'>Quel est votre âge?</label><br />
                         <input className='signup-input' required min={4} max={99} { ...age }></input>
                     </li>

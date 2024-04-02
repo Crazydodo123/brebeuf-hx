@@ -3,7 +3,7 @@ const Location = require('../models/location')
 
 locationsRouter.get('/', async (request, response) => {
   const locations = await Location.find({})
-  response.json(locations)
+  response.json(locations).end()
 })
 
 locationsRouter.post('/', async (request, response) => {

@@ -72,8 +72,10 @@ blockquote p {
 /* CONTACT BUTTON START */
 
 #contact-button {
+    font-size: 1.1rem;
     border-radius: 5px;
     padding: 10px;
+    padding-right: 0px;
     color: white;
     background-color: #393939;
     border: none;
@@ -131,6 +133,17 @@ NAVBAR CONTINUES
     background-color: none;
 }
 
+#logo-name {
+    font-size: 18px;
+    font-weight: 460;
+}
+
+.navlink {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 #logo-image:active {
     opacity: 0.5;
 }
@@ -185,6 +198,11 @@ NAVBAR CONTINUES
     user-select: none;
     -webkit-user-drag: none;
 }
+
+#joindre {
+    font-size: 1.15rem;
+}
+
 /* NAVBAR END */
 
 /* INFO COMPONENT START*/
@@ -194,21 +212,25 @@ NAVBAR CONTINUES
     border: 5px solid gray;
 }
 
+#comment-aider {
+    margin-top: 10vh;
+}
+
 #comment-aider ol{
-    margin-left: 5vw;
-    margin-right: 5vw;
+    margin-left: 16vw;
+    margin-right: 16vw;
     line-height: 30px;
     background-color: #6e451c;
     border-radius: 5px;
     padding-top: 20px;
     padding-bottom: 20px;
+    margin-bottom: 20vh;
     color: #F0F0F0;
 }
 
 #who-we-r {
-    padding: 10px 0 20px 0;
+    padding: 80px 0 160px 0;
     margin-top: -10px; 
-    margin-bottom: 0;
     background-color: #E6E6E6;
 }
 
@@ -337,6 +359,7 @@ NAVBAR CONTINUES
 
 .main-paragraphs {
     padding: 0 10vw 0 10vw;
+    line-height: 30px;
 }
 
 blockquote p {
@@ -352,16 +375,23 @@ blockquote span {
 }
 
 .mission-container {
+    width: 85%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-around;
 }
 
 
 #mission-text {
+    margin-left: 40px;
     display: flex;
     width: 50%;
     align-items: center;
     line-height: 30px;
+}
+
+#mission-text > li {
+    margin-top: 20px;
 }
 
 /* Sign Up page */
@@ -371,24 +401,44 @@ blockquote span {
 }
 
 #signup-form {
-    margin: 0 5%;
+    margin: 0 26%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#signup-questions {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .signup-label {
     font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.small {
+    width: 50%;
+}
+
+.small > .signup-input {
+    width: 260px;
 }
 
 .signup-input {
-    font-family: 'Tinos', serif;
     font-size: 16px;
-    margin-top: 10px;
+    margin-top: 16px;
     margin-bottom: 25px;
-    width: 30%;
+    width: 500px;
     padding: 5px;
 }
 
+textarea {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 textarea.signup-input {
-    width: 40%;
+    width: 97%;
     font-size: 16px;
 }
 
@@ -461,8 +511,12 @@ border-radius: 30px
 
 /* Contact Page */
 
+.contact {
+    margin-top: 12vh;
+}
+
 #contact-form {
-    width: 60%;
+    width: 40%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -472,7 +526,6 @@ border-radius: 30px
 
 .subsection-header {
     font-size: 18px;
-    font-family: 'Tinos', serif;
     margin-bottom: 10px;
 }
 
@@ -491,14 +544,12 @@ border-radius: 30px
 
 .text-input {
     font-size: 18px;
-    font-family: 'Tinos', serif;
     width: 300px;
     height: 34px;
 }
 
 .input-label {
 font-size: 14px;
-font-family: 'Lato', sans-serif;
 color: #333333;
 }
 
@@ -510,7 +561,6 @@ margin-bottom: 0;
 textarea {
 resize: none;
 font-size: 18px;
-font-family: 'Tinos', serif;
 width: 100%;
 height: 136px;
 }
@@ -518,10 +568,9 @@ height: 136px;
 #submit-button {
 background-color: black;
 color: white;
-font-family: 'Tinos', serif;
 height: 2em;
-width: 6em;
-margin: 10px auto;
+width: 16%;
+margin: 10px 41%;
 font-size: 16px;
 border: none;
 }
@@ -534,6 +583,10 @@ cursor: pointer;
 
 
 /* Donate */
+
+.centered {
+    text-align: center;
+}
 
 #soutenir-gany p{
     padding-top: 20px;
@@ -660,3 +713,68 @@ cursor: pointer;
     padding: 4px;
 }
 
+
+/* Application start */
+
+#admin-section {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.admin-header {
+    font-size: 1.4rem;
+}
+
+#applications, #messages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.application, .message {
+    padding: 4px 8px;
+    border: 1px solid black;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.application-small, .message-small {
+    padding: 4px 8px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.application > p, .message > p {
+    padding: 0px;
+    margin: 0px;
+}
+
+.word-wrap {
+    word-wrap: break-word;
+}
+
+
+#admin-subheader {
+    margin-top: 12vh;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#admin-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#admin-submit {
+    margin-top: 30px;
+    width: 100px;
+}
+
+#admin-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

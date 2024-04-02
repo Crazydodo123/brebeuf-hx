@@ -7,7 +7,6 @@ usersRouter.get('/', async (request, response) => {
 })
 
 usersRouter.post('/', async (request, response) => {
-  console.log(request.body)
   const content = request.body
   
   if (!content) response.status(401)
@@ -19,6 +18,15 @@ usersRouter.post('/', async (request, response) => {
   
   const result = await user.save()
   response.status(201).json(result)
+})
+
+usersRouter.delete('/:id', async (request, response) => {
+  const userToDelete = await User.findById(request.params.id)
+
+  if (!userToDelete) response.status(404).end()
+  
+  await User.findByIdAndDelete(request.params.id)
+  response.status(204).end()
 })
 
 module.exports = usersRouter

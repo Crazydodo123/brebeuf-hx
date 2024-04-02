@@ -22,4 +22,13 @@ messagesRouter.post('/', async (request, response) => {
   response.status(201).json(result)
 })
 
+messagesRouter.delete('/:id', async (request, response) => {
+  const messageToDelete = await Message.findById(request.params.id)
+
+  if (!messageToDelete) response.status(404).end()
+  
+  await Message.findByIdAndDelete(request.params.id)
+  response.status(204).end()
+})
+
 module.exports = messagesRouter

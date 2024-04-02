@@ -11,7 +11,7 @@ const Info = () => {
             <div id="who-we-r">
                 <h3 className = "infoh3">Qui sommes-nous?</h3>
                 <p className = "main-paragraphs">Fondé en 2023, Ganymède est une initiative de onze étudiants du collégial. Constatant la réalité et les dangers de l’itinérance dans le quartier Côte-des-Neiges, les membres fondateurs décident d’organiser un groupe qui distribuera, quotidiennement, de l’eau, du café ou du bouillon aux personnes itinérantes du quartier et engagera la discussion avec eux. De cette façon, Ganymède cherche à atténuer la pression de deux dangers importants pour les personnes itinérantes : les risques liés à la température et l’exclusion sociale. En donnant de l’eau fraîche en été et des boissons chaudes en hiver, le groupe espère réduire les risques d’insolation et d’hypothermie guettant les personnes itinérantes ; en discutant avec elles, ils souhaitent leur fournir un besoin de première nécessité fréquemment oublié : les interactions humaines.</p>
-                <p className = "main-paragraphs">Actuellement, Ganymède est à la recherche d’un organisme à but non-lucratif (OBNL) prêt à gérer ses fonds. Nous espérons pouvoir commencer nos activités de distribuGon à l’été 2024.</p>
+                <p className = "main-paragraphs">Actuellement, Ganymède est à la recherche d’un organisme à but non-lucratif (OBNL) prêt à gérer ses fonds. Nous espérons pouvoir commencer nos activités de distribution à l’été 2024.</p>
             </div>
             <div id="notre-mission">
                 <h3 className = "infoh3">Notre mission</h3>
